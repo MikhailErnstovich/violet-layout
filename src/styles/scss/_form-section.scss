@@ -1,0 +1,84 @@
+.form-section{
+    .section__title{
+        margin-bottom: 35px;
+    }
+    .section__wrapper{
+        padding: 0 16px;
+    }
+}
+.contact-form{
+    margin-bottom: 35px;
+    &__input{
+        display: block;
+        width: 100%;
+        height: 45px;
+        margin: 0 auto 20px auto;
+        padding: 0 20px;
+        border: 1px solid #e5e5e5;
+        line-height: 45px;
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 14px;
+        color: $violet;
+        transition: all 0.3s ease;
+        &::placeholder{
+            opacity: 0.5;
+        }
+        &:focus{
+            border-color: $green;
+            background-color: rgba(0, 224, 209, 0.1);
+        }
+        &:hover{
+            border-color: $green;
+            background-color: rgba(0, 224, 209, 0.1);
+        }
+    }
+    &__textarea{
+        display: block;
+        width: 100%;
+        height: 200px;
+        margin: 0 auto 20px auto;
+        padding: 10px 20px;
+        border: 1px solid #e5e5e5;
+        line-height: 25px;
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 14px;
+        color: $violet;
+        resize: none;
+        transition: all 0.3s ease;
+        &::placeholder{
+            opacity: 0.5;
+        }
+        &:focus{
+            border-color: $green;
+            background-color: rgba(0, 224, 209, 0.1);
+        }
+        &:hover{
+            border-color: $green;
+            background-color: rgba(0, 224, 209, 0.1);
+        }
+    }
+    .button{
+        margin: 0 auto;
+        border-color: $violet;
+        color: $violet;
+        &:hover{
+            background-color: rgba(65, 61, 75, 0.1);
+        }
+    }
+}
+.clients{
+    &__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 10px;
+    }
+    &__client{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc((100% - 10px) / 2);
+        height: 85px;
+    }
+}

@@ -1,0 +1,23 @@
+@media screen and (min-width: 960px) {
+    .portfolio-section{
+        .button{
+            margin: 70px auto 0 auto;
+        }
+        .section__title{
+            display: inline-block;
+            text-align: left;
+            margin-bottom: 70px;
+        }
+        &__link{
+            float: right;
+            margin: 0;
+        }
+    }
+    .flex-gallery{
+        width: 100%;
+        &_hidden{
+            display: block;
+        }
+    }
+
+}

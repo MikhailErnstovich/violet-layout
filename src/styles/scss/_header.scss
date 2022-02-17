@@ -1,0 +1,180 @@
+.header{
+    width: 100vw;
+    max-width: 100%;
+    padding: 0 16px;
+    background:url('../../assets/img/section-overlay.webp') no-repeat,
+            url('../../assets/img/header-img.webp') no-repeat;
+    background-size: cover;
+    &__content{
+        margin:0 auto;
+        max-width: 960px;
+    }
+}
+.logo{
+    height: 50px;
+    &__name{
+        display: inline-block;
+        height: 50px;
+        margin-left: 6px;
+        font-family: 'Roboto';
+        font-size: 32px;
+        font-weight: 100;
+        color: transparent;
+        background-image: linear-gradient(0deg, $green, #48a4cc);
+        background-clip: text;
+    }
+}
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &__label{
+        display: block;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        font-size: 40px;
+        color: $green;
+        cursor: pointer;
+        i{
+            overflow: hidden;
+            color: transparent;
+            background-image: linear-gradient(0deg, $green, #48a4cc);
+            background-clip: text;
+            user-select: none; /* supported by Chrome and Opera */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+        }
+        .fa-times{
+            width: 0;
+            vertical-align: top;
+            text-align: center;
+            transform: scale(0.6);
+            transition: all 0.3s ease;
+            transition-delay: 0.15s;
+
+        }
+        .fa-bars{
+            width: 40px;
+            transition: all 0.3s ease;
+        }
+    }
+    &__dropdown{
+        width: 100%;
+        overflow: hidden;
+        height: 0;
+        transition: all 0.3s ease;
+    }
+    &__toggle{
+        display: none;
+        &:checked ~ .menu__dropdown{
+            height: 350px;
+        }
+        &:checked ~ .menu__label .fa-times{
+            width: auto;
+            transform: scale(1);
+        }
+        &:checked ~ .menu__label .fa-bars{
+            width: 0;
+        }
+    }
+    &__item{
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        font-family: 'Roboto';
+        font-weight: 900;
+        &_active .menu__link{
+            color: $green;
+        }
+    }
+    &__link{
+        position: relative;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        transition: color 0.3s ease;
+        &::after{
+            content:'';
+            position: relative;
+            top: -10px;
+            margin: 0 auto;
+            display: block;
+            height: 1px;
+            width: 0;
+            background-color: $green;
+            transition: width 0.3s ease;
+        }
+        &:hover{
+            color: $green;
+            &::after{
+                width: 30px;
+                background-image: linear-gradient(0deg, $green, #48a4cc);
+            }
+        }
+        &:focus{
+            outline: none;
+            color: $green;
+        }
+    }
+}
+.carousel{
+    max-width: 780px;
+    margin: 0 auto;
+    &-inner{
+        height: 530px;
+        padding-bottom: 35px;
+        display: flex;
+        align-items: center;
+    }
+    &-indicators{
+        position: absolute;
+        bottom: 60px;
+        margin: 0;
+        .radio-btn{
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 1px solid #fff;
+        }
+        .radio-btn.active{
+            border-color: $green;
+            background-color: $green;
+        }
+    }
+    &-caption{
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        height: 100%;
+    }
+    &-slide-title{
+        display: block;
+        width: 100%;
+        font-family: 'Playfair display';
+        font-weight: 900;
+        font-size: 32px;
+        text-transform: capitalize;
+    }
+    &-divider{
+        width: 50px;
+        height: 1px;
+        background-color: $green;
+        margin: 30px auto;
+    }
+    &-text{
+        display: block;
+        line-height: 26px;
+    }
+    .button{
+        margin: 50px auto 0 auto;
+    }
+}

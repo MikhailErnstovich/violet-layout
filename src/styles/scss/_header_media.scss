@@ -1,0 +1,28 @@
+@media screen and (min-width: 960px) {
+    .header{
+        &__content{
+            padding: 0 10px;
+        }
+    }
+    .menu{
+        &__label{
+            display: none;
+        }
+        &__dropdown{
+            width: 70%;
+            height: 50px;
+            text-align: right;
+        }
+        &__item{
+            display: inline-block;
+            width: auto;
+            margin: 0 10px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        &__link{
+            font-size: 13px;
+        }
+    }
+}

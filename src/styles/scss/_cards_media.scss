@@ -1,0 +1,21 @@
+@media screen and (min-width: 960px) {
+    .cards{
+        flex-wrap: wrap;
+        .section__separator{
+            display: block;
+            width: 100%;
+        }
+        &__card{
+            height: auto;
+            padding: 0 0 40px 0;
+            cursor: auto;
+            &_hidden{
+                width: 300px;
+                opacity: 1;
+            }
+        }
+        &__control-btn{
+            display: none;
+        }
+    }
+}

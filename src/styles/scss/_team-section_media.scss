@@ -1,0 +1,31 @@
+@media screen and (min-width: 960px) {
+    .team-section{
+        .text{
+            margin-bottom: 25px;
+        }
+        .img-gallery{
+            margin: 55px 0 70px 0;
+        }
+    }
+    .img-gallery{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        margin-bottom: 20px;
+        &__zoom-label{
+            display: none;
+        }
+        &__img-wrapper{
+            height: 260px;
+        }
+        &__img{
+            width: 220px;
+            height: 230px;
+            object-fit: cover;
+        }
+    }
+    .person{
+        padding: 22px 0;
+        border: 1px solid #c6c4c9;
+    }
+}

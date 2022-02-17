@@ -1,0 +1,81 @@
+.team-section{
+    width: 100vw;
+    max-width: 100%;
+    background:url('../../assets/img/section-overlay.webp') no-repeat,
+    url('../../assets/img/header-img.webp') no-repeat;
+    background-size: cover;
+    .img-gallery{
+        margin: 25px 0 20px 0;
+    }
+    .text{
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .button{
+        margin: 0 auto;
+    }
+}
+.img-gallery{
+    &__zoom-label{
+        display: block;
+        width: 88px;
+        height: 112px;
+        padding: 0 10px 0 0;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: right;
+        font-size: 20px;
+        color: #ffffff30;
+    }
+    &__zoom-toggle{
+        display: none;
+        &:checked + .img-gallery__img{
+            width: 220px;
+            height: 230px;
+        }
+        &:checked ~ .img-gallery__zoom-label{
+            height: 230px;
+            width: 220px;
+            margin-top: 0;
+            .fas{
+                display: none;
+            }
+        }
+    }
+    &__img-wrapper{
+        position: relative;
+        margin: 0 auto 20px auto;
+        width: 220px;
+    }
+    &__img{
+        display: block;
+        margin: 0 auto;
+        width: 88px;
+        height: 92px;
+        object-fit: contain;
+        transition: all 0.3s ease;
+    }
+}
+.person{
+    padding: 5px 0 22px 0;
+    &__name{
+        text-align: center;
+        font-family: 'Roboto';
+        font-weight: 900;
+        font-size: 14px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+    &__profession{
+        margin-top: 6px;
+        text-align: center;
+        font-family: 'Roboto';
+        font-weight: 300;
+        font-size: 13px;
+        color: #ffffff70;
+        text-transform: uppercase;
+    }
+}

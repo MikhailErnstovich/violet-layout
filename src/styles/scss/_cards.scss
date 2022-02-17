@@ -1,0 +1,64 @@
+.cards{
+    position: relative;
+    margin-top: 55px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    .section__separator{
+        display: none;
+    }
+    &__card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 300px;
+        height: 350px;
+        padding: 40px 20px;
+        opacity: 1;
+        overflow: hidden;
+        transition: opacity 0.3s ease;
+        &_hidden{
+            width: 0;
+            padding: 0;
+            opacity: 0;
+        }
+    }
+    &__img{
+        margin: 35px 0;
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        overflow: hidden;
+    }
+    &__card-title{
+        display: block;
+        margin-bottom: 25px;
+        font-family: 'Roboto';
+        font-weight: 900;
+        font-size: 14px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $violet;
+        overflow: hidden;
+    }
+    &__text{
+        display: block;
+        max-width: 250px;
+        text-align: center;
+        color: #333;
+        overflow: hidden;
+    }
+    &__control-btn{
+        position: absolute;
+        height: 100%;
+        font-size: 30px;
+        border: none;
+        &_left{
+            left: 0;
+        }
+        &_right{
+            right: 0;
+        }
+    }
+}

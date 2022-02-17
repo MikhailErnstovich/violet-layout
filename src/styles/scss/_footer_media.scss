@@ -1,0 +1,31 @@
+@media screen and (min-width: 960px) {
+    .footer{
+        padding: 75px 0;
+        &__wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0 10px;
+        }
+        &__item{
+            width: 300px;
+            margin-bottom: 70px;
+        }
+        &__item-title{
+            text-align: left;
+            margin-bottom: 25px;
+        }
+        &__copyright{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        &__links{
+            display: flex;
+            column-gap: 30px;
+        }
+        &__social-media{
+            justify-content: flex-start;
+        }
+    }
+}
